@@ -1,20 +1,10 @@
 language: node_js
-
 node_js:
-  - "10.16.1"
-
-cache:
-  directories:
-    - node_modules
-
+- 10.16.1
 script:
-  - npm run test
-
+- npm run test
 deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN
-  local_dir: build
-  on:
-    branch: master
-
+  provider: heroku
+  app: zride
+  api_key:
+    secure: fGrnoECkIdcpOMgiZyziOOz7X/JZpXRcTQN9QMFTX+9G/lYk1cjMqMRNlPyIhHOgb0HbKPlkhJdfqpEesheyJjc/AtLt3vRGJR03wfDMw23Cm0Wo+lFSxTc8XCSzT2rsCpd7Nlcx0ihHxJmOQXkAeNFAq+7UIO3OIGLr4KbM2X/0kbOpFOMoMLL/NMvcVOMf8ucczed2RyHHTC5SMfDWHODmihAtkQLtD3SsxMsRB8UdNAuLhzP1ioBWPBx5yOW/lwvTC8TRO95gsmIb6BZsJWZVRHqQFYMZ4VU18cmhFya8n/2Z9aCL5GjwZDtBL6h5ZR+as4YZ31Xsn3vtHCPYxeYF1zHRYi4PB3+GWimUBgBD+r/UDABNHapkTqYs+m1T3wjrjp0qtG1gNLOUrvPgEtgh+4C54d0w+7YZg3GGCqxCn34ufYaADPH1imMEy9x27j4T+EDaC+P16cCM5c0UmqlaO5dEUdQuTbQKz7gM8D4jiNH7LxvWbNJCjI8dh2650X4XulplPf8qu5jM+C/llSz/l7Y/S1b3Sp89NNXWI+tRjHMETYgiVtfqrE5cEqM90t+/Hh5otwYGyfc6ojRxFSQavjhEZEUhfFwpVVZadbBKQhJxDIOVfEObdDrKpLt3yvbB2JMCbHajKsh7KomS+DnF900D6D6SA17B7iUWeFU=
