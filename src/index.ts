@@ -7,8 +7,9 @@ import * as bodyParser from  "body-parser";
 
 createConnection().then(async connection => {
     const cinemaContainer = connection.getRepository(Cinema);
-
+    const port = process.env.PORT || 8080;
     const app = express();
+
     app.use(bodyParser.json());
 
     app.get("/", (req, res) => {
@@ -52,7 +53,7 @@ createConnection().then(async connection => {
         return res.send(results);
     });
 
-    app.listen(3000);
+    app.listen(port);
     console.log('Сервер запущен!');
 
 }).catch(error => console.log(error));
