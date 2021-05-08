@@ -19,7 +19,7 @@
       "supertest": "^4.0.2",
       "travis": "^0.1.1",
       "ts-node": "^3.3.0",
-      "typeorm": "0.2.20",
+      "typeorm": "0.2.25",
       "typescript": "^3.3.3333"
    },
    "scripts": {
